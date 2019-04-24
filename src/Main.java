@@ -1,7 +1,12 @@
+import java.util.Scanner;
+
 public class Main {
 
+
     public static void zad1_1() {
-        int dzienTygodnia = 10;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Zad1_1:\nPodaj numer dnia tygodnia:");
+        int dzienTygodnia = scan.nextInt();
         String dzien = "";
         switch (dzienTygodnia) {
             case 1:
@@ -26,13 +31,15 @@ public class Main {
                 dzien = "Niedziela";
                 break;
             default:
-                dzien = "Niepoprawny numer dnia tygodnia";
+                dzien = "niepoprawny numer dnia tygodnia";
         }
-        System.out.println("Zad1_1:\t" + dzien);
+        System.out.println("Jest to: " + dzien);
     }
 
     public static void zad1_2() {
-        String miesiac = "marzec";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Zad1_2:\nPodaj nazwe miesiąca:");
+        String miesiac = scan.nextLine();
         String poraRoku = "";
         switch (miesiac) {
             case "marzec":
@@ -56,15 +63,20 @@ public class Main {
                 poraRoku = "zima";
                 break;
             default:
-                poraRoku = "Niepoprawna nazwa miesiąca";
+                poraRoku = "niepoprawna nazwa miesiąca";
         }
-        System.out.println("Zad1_2:\t" + poraRoku);
+        System.out.println("Jest to: " + poraRoku);
     }
 
     public static void zad1_3() {
-        int a = 1;
-        int b = 2;
-        char znak = '*';
+        boolean popr = true;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Zad1_3:\nPodaj pierwszą liczbę:");
+        int a = scan.nextInt();
+        System.out.println("Podaj drugą liczbę:");
+        int b = scan.nextInt();
+        System.out.println("Podaj znak działania (+, -, /, *");
+        char znak = scan.next().charAt(0);
         int wynik = 0;
         switch (znak) {
             case '+':
@@ -79,8 +91,14 @@ public class Main {
             case '*':
                 wynik = a * b;
                 break;
+            default:
+                System.out.println("Niepoprawny znak działania");
+                popr = false;
+                break;
         }
-        System.out.println("Zad1_3:\t"+wynik);
+        if (popr) {
+            System.out.println("Wynik to: " + wynik);
+        }
     }
 
     public static void zad2_1() {
@@ -118,7 +136,7 @@ public class Main {
     }
 
     public static void zad2_3() {
-        int a = 15;
+        int a = 11;
         boolean jest = true;
         int i = 1;
         while (jest && (i < a - 1)) {
@@ -159,8 +177,9 @@ public class Main {
     }
 
     public static void zad2_5() {
-        System.out.println("Zad2_5:");
-        int wysokosc = 15;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Zad2_5:\nPodaj wysokosc choinki:");
+        int wysokosc = scan.nextInt();
         for (int i = 1; i <= wysokosc; i++) {
             String linijka = "";
             for (int j = wysokosc; j > i; j--) {
