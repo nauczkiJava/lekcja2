@@ -5,7 +5,7 @@ public class Main {
 
     public static void zad1_1() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Zad1_1:\nPodaj numer dnia tygodnia:");
+        System.out.println("Zad1_1:\nPodaj numer dnia tygodnia: ");
         int dzienTygodnia = scan.nextInt();
         String dzien = "";
         switch (dzienTygodnia) {
