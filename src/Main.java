@@ -136,18 +136,20 @@ public class Main {
     }
 
     public static void zad2_3() {
-        int a = 11;
+        System.out.println("Zad2_3:\nPodaj liczbę do sprawdzenia:");
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
         boolean jest = true;
         int i = 1;
         while (jest && (i < a - 1)) {
             i++;
             if ((a % i) == 0) {
                 jest = false;
-                System.out.println("Zad2_3:\tTo nie jest liczba pierwsza.");
+                System.out.println("To nie jest liczba pierwsza.");
             }
         }
         if (jest) {
-            System.out.println("Zad2_3:\tJest to liczba pierwsza.");
+            System.out.println("Jest to liczba pierwsza.");
         }
 
     }
